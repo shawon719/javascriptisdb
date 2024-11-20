@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic window with form validation</title>
+    <style>
+      .fodiv {
+        width: 30%;
+        height: 400px;
+        border: 4px solid black;
+        margin-top: 50px;
+        margin-left: 500px;
+        background-color: #426f8a;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+      }
+      .fodiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        width: 100px;
+        height: 30px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #5c5f61;
+
+        box-sizing: border-box;
+      }
+      .btn:hover {
+        background-color: white;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fodiv">
+      <form action="#" name="ff">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="na"
+          id="name"
+          placeholder="Enter Name"
+          onblur="chkName()"
+          required
+        /><br /><br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="em"
+          id="email"
+          onblur="checkEmail()"
+          required
+        /><br /><br />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="pa"
+          id="password"
+          onblur="chkPass()"
+          required
+        /><br /><br />
+        <label for="" required>Gender:</label>
+        <input type="radio" name="rgen" id="female" value="female" /><label
+          for="female"
+          >Female</label
+        >
+        <input type="radio" name="rgen" id="male" male="male" /><label
+          for="male"
+          >Male</label
+        >
+        <br /><br />
+        <label for="" required>Round:</label>
+        <select name="ro" id="">
+          <option value="select">select</option>
+          <option value="60">60</option>
+          <option value="61">61</option>
+          <option value="62">62</option></select
+        ><br /><br />
+        <label for="" required>Education:</label>
+        <input type="checkbox" name="cedu" id="ssc" value="ssc" /><label
+          for="ssc"
+          >SSC</label
+        >
+        <input type="checkbox" name="cedu" id="hsc" value="hsc" /><label
+          for="hsc"
+          >HSC</label
+        >
+        <input type="checkbox" name="cedu" id="bsc" value="bsc" /><label
+          for="bsc"
+          >BSC</label
+        ><br /><br />
+        <button type="submit" onclick="myDynamic()" class="btn">Submit</button>
+        <button type="reset" class="btn">Reset</button>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

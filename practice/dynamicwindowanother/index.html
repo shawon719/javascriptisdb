@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic window</title>
+
+      
+  </head>
+  <body>
+    <div>
+      <form action="#" name="formm">
+        <label for="n">Name:</label>
+        <input type="text" id="n" name="na" onblur="checkName()" /><br />
+        <br />
+        <label for="e">Email:</label>
+        <input type="email" name="em" id="e" onblur="checkEmail()" /><br />
+        <br />
+        <label for="p">Password:</label>
+        <input
+          type="password"
+          name="pas"
+          id="p"
+          onblur="checkPassword()"
+        /><br /><br />
+
+        <label for="g ">Gender:</label><br />
+        <label for="fe">Female</label>
+        <input type="radio" id="fe" value="female" name="rgen" />
+        <label for="ma">Male</label>
+        <input type="radio" id="ma" value="male" name="rgen" /><br /><br />
+
+        <label for="">Round:</label>
+        <select name="round" id="">
+          <option value="select">Select</option>
+          <option value="59">59</option>
+          <option value="60">60</option>
+          <option value="61">61</option>
+          <option value="62">62</option></select
+        ><br /><br />
+
+        <label for="">Certificate:</label>
+        <label for="s">SSC</label>
+        <input type="checkbox" name="cer" id="s" value="SSC" />
+        <label for="h">HSC</label>
+        <input type="checkbox" name="cer" id="h" value="HSC" />
+        <label for="b">BSC</label>
+        <input type="checkbox" name="cer" id="b" value="BSC" /><br /><br />
+
+        <button type="submit" onclick="myFunction()">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

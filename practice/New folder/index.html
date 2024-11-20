@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dynamic window</title>
+  </head>
+  <body>
+    <div>
+      <form action="#" name="ff">
+        <label for="">Name:</label>
+        <input type="text" name="na" /><br /><br />
+        <label for="">email:</label>
+        <input type="email" name="em" /><br /><br />
+        <label for="">password:</label>
+        <input type="password" name="pa" id="" /><br /><br />
+        <label for="">Gender:</label>
+        <input type="radio" name="rgen" id="" value="female" />Female
+        <input type="radio" name="rgen" id="" value="male" />Male <br /><br />
+        <label for="">round:</label>
+        <select name="ro" id="">
+          <option value="ssc">ssc</option>
+          <option value="hsc">hsc</option></select
+        ><br /><br />
+        <label for="">edu:</label>
+        <input type="checkbox" name="cedu" value="ssc" />ssc
+        <input type="checkbox" name="cedu" value="hsc" />hsc
+        <input type="checkbox" name="cedu" value="bsc" />bsc <br /><br />
+        <button type="submit" onclick="formValidate()">submit</button>
+      </form>
+    </div>
+
+    <script>
+      function formValidate() {
+        let name = document.ff.na.value;
+        let email=document.ff.em.value;
+        let password=document.ff.pa.value;
+        let round=document.ff.ro.value;
+        let gender="";
+        let education="";
+
+        doc = open(" ", " ", "width=400px,height=300px ");
+
+        for(i=0;i<document.ff.rgen.length;i++){
+            if(document.ff.rgen[i].checked){
+                gender=document.ff.rgen[i].value;
+            }
+        }
+
+        for(i=0;i<document.ff.cedu.length;i++){
+            if(document.ff.cedu[i].checked){
+                education +=document.ff.cedu[i].value+ ",";
+            }
+        }
+
+        with (doc.document) {
+          write("Name:" + name + "<br>");
+          write("email:"+email+"<br>");
+          write("password:"+password+"<br>");
+          write("gender:"+gender+"<br>");
+          write("round:"+round+"<br>");
+          write("edu:"+education+"<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

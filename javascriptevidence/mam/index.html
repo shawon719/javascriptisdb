@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exam</title>
+    <style>
+      form {
+        margin: auto;
+        width: 400px;
+        height: 300px;
+        padding: 30px;
+        text-align: center;
+        border: 1px solid rgb(20, 4, 8);
+        background-color: rgb(184, 180, 195);
+        font-size: 25px;
+        color: rgb(162, 40, 12);
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" name="form">
+      <label for="">Name:</label>
+      <input type="text" name="nam" id="" />
+      <br />
+      <br />
+      <label for="">Email:</label>
+      <input type="email" name="mail" /> <br />
+      <br />
+      <label for="">Course:</label>
+      <select name="course" id="">
+        <option value="choose">Choose</option>
+        <option value="SSC">SSC</option>
+        <option value="hSC">HSC</option>
+        <option value="bSC">BSC</option>
+        <option value="mSC">MSC</option>
+      </select>
+      <br />
+      <br />
+      <label for="">Sex:</label><br />
+
+      <input type="radio" name="gender" value="female" id="" /><label for=""
+        >Female</label
+      >
+
+      <input type="radio" name="gender" value="male" id="" />
+      <label for="">Male</label>
+      <br />
+      <br />
+      <input
+        type="button"
+        name="button"
+        value="submit"
+        id=""
+        onclick="myForm()"
+      />
+    </form>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(name, color, model) {
+          this.name = name;
+          this.color = color;
+          this.model = model;
+        }
+
+        name = "BMW";
+        model = "r34";
+        color = "white";
+        getInfo() {
+          document.write("hi");
+          return (a = "bmw");
+        }
+      }
+
+      var a = new Car("bmw", "red", "343");
+      var b = new Car("toyota", "red", "343");
+      //document.write(a);
+
+      document.write(a.name + " " + a.model + " " + a.color);
+      document.write("<br>");
+      document.write(b.name + " " + b.model + " " + b.color);
+      document.write("<br>");
+
+      class Bike extends Car {
+        constructor(name, color, model, speed) {
+          super(name, color, model);
+          this.speed = speed;
+        }
+        showSpeed() {
+          return "run fast";
+        }
+      }
+
+      var p = new Bike("honda", "white", "46456", "160km");
+      document.write(
+        p.name +
+          "," +
+          p.color +
+          "," +
+          p.model +
+          "," +
+          p.speed +
+          "," +
+          p.showSpeed()
+      );
+    </script>
+  </body>
+</html>

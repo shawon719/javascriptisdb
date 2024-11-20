@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <head>
+      <style>
+        form {
+        width: 25%;
+        /*height: 6000x;*/
+
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      </style>
+      
+  </head>
+  <body>
+    <form action="#" name="f">
+      <div class="formd">
+        Name:<br />
+        <input type="text" name="n" /><br />
+        Addrss:<br />
+        <textarea name="add" id=""></textarea><br />
+        Mail:<br />
+        <input type="email" name="m" id="" /><br /><br />
+        <div>Gender:<br>
+                Male<input type="radio" name="rdoG" value="Male">
+                Female<input type="radio" name="rdoG" value="Female">
+        </div><br>
+        <div>
+            Qualification:<br>
+            <select name="education" id="">
+                <option value="ssc ">Ssc</option>
+                <option value="hsc ">Hsc</option>
+                <option value="ssc ">Ssc</option>
+            </select>
+        </div><br>
+        <div>
+            COURSE:<br>
+            <input type="checkbox" name="cdoC" value="html">html<br>
+            <input type="checkbox" name="cdoC" value="css">css<br>
+            <input type="checkbox" name="cdoC" value="bootstrap">bootstrap<br>
+            <input type="checkbox" name="cdoC" value="javascript">javascript<br>
+        </div><br>
+        <input
+          type="button"
+          name="button"
+          id=""
+          value="submit"
+          onclick="my_f()"
+        />
+        <input
+          type="reset"
+          name="button"
+          value="reset"
+          id=""
+          
+        /><br />
+      </div>
+    </form>
+
+    <script>
+      function my_f() {
+        var name = document.f.n.value;
+        var address = document.f.add.value;
+        var email = document.f.m.value;
+        var education=document.f.education.value;
+        doc = open("", "", "width=300px,height=200px");
+        var gender="";
+        var course="";
+
+        //check if radio button is selected and read selected value
+        for(i=0;i<document.f.rdoG.length;i++){
+            if(document.f.rdoG[i].checked){
+                gender=document.f.rdoG[i].value;
+            }
+        }
+
+        for(j=0;j<document.f.cdoC.length;j++){
+            if(document.f.cdoC[j].checked){
+                course +=document.f.cdoC[j].value+",";
+            }
+        }
+
+
+        
+        with(doc.document){
+            write("<html>");
+            write("<head><title>"+title+"</title></head>");
+            write("<body style='background-color:aqua '>");
+                write("<div style='border:2px solid black ,padding:15px, background-color:red'>Name:"+name+"<br>");
+                    write("Address:"+address+"<br>");
+                    write("course:"+course+"<br>");
+                    write("Gender:"+gender+"<br>");
+
+                    write("</body>");
+                    write("</html>");
+        }
+
+        with (doc.document) {
+          write("Name:" + name);
+          write("<br>");
+          write("Address:" + address);
+          write("<br>");
+          
+          write("Mail:" + email);
+          write("<br>");
+          write("Gender:"+gender+"<br>");
+          write("<br>");
+          write("education:"+education);
+          write("<br>");
+          write("Course:"+course+"<br>");
+          write("<input type='button' value='close me' onclick='self.close();'/>")
+
+          write("<input type='button' value='print' onclick='self.print();'/>")
+        }
+      }
+    </script>
+  </body>
+</html>

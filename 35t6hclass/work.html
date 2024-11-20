@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student</title>
+  </head>
+  <body>
+    <script>
+      class A {
+        constructor(id, name, age) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+        }
+        getExtra() {
+          document.write("Round");
+          return "round=62";
+        }
+      }
+
+      var s = new A("1285366", "sharmony", "23");
+      document.write(s.id + "," + s.name + "," + s.age + "," + s.getExtra());
+      document.write("<br>");
+
+      class B extends A {
+        constructor(id, name, age, dateofbirth) {
+          super(id, name, age);
+          this.dateofbirth = dateofbirth;
+        }
+        showClass() {
+          document.write("class", "<br>");
+
+          return "class 12";
+        }
+      }
+      var b = new B("1285345", "rukaiya", "23", "20-1-2002");
+      document.write(
+        b.id +
+          "," +
+          b.name +
+          "," +
+          b.age +
+          "," +
+          b.dateofbirth +
+          "," +
+          b.showClass()
+      );
+      document.write("<br>");
+
+      document.write(b.showClass());
+    </script>
+  </body>
+</html>
